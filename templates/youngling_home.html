@@ -1,0 +1,35 @@
+{% extends "master.html" %}
+{% block content %}
+
+<body class="text-center">
+  <form class="form-signin" enctype=multipart/form-data action="/youngling_home" method="post">
+    <img class="mb-4" src="../static/images/avatar_young.jpg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Join with your name and profile picture!</h1>
+    <label for="inputEmail" class="sr-only">Name</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Name" name='name' required autofocus> <br>
+    <input type=file name='file' id="uploadPic" required> <br><br>
+    <!-- <p>Upload a profile picture!</p> -->
+    <!-- <button class="btn btn-lg btn-secondary" type="submit" value=Upload> Upload a profile picture!</button> <br><br> -->
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p> -->
+  </form>
+  
+</body>
+
+<!-- <body class="text-center">
+  <form class="form-signin">
+    <img class="mb-4" src="images/avatar.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Join with your name</h1>
+    <label for="inputEmail" class="sr-only">Name</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Name" required autofocus>
+    
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file> <br>
+      <input type=submit value=Upload>
+    </form>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+  </form>
+</body> -->
+{% endblock %}
+       

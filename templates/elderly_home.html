@@ -1,0 +1,30 @@
+{% extends "master.html" %}
+{% block content %}
+<script>
+    window.onload = function() {
+        document.getElementById("my_audio").play();
+    }
+</script>
+
+<body class="text-center">
+  <form class="form-signin" enctype=multipart/form-data action="/elderly_home" method="post">
+    <img class="mb-4" src="../static/images/avatar_elder.png" alt="" width="150" height="150">
+    <h1 class="h1 mb-3 font-weight-normal">Hi, what is your name?</h1>
+    <label for="inputEmail" class="sr-only">Name</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Name" name='name' required autofocus> <br>
+
+    <button style="padding: 10px 20px;font-size: 30px;border-radius: 10px;width:70%;"type="submit">Submit</button>
+    
+    <br>
+    <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p> -->
+    <audio controls>
+        <source src="../static/audios/call_grandma_main.ogg" type="audio/ogg">
+        <source src="../static/audios/call_grandma_main.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    <!-- <audio id="my_audio" src="../static/audios/call_grandma_main.mp3" loop=false></audio> -->
+  </form>
+  <br>
+</body>
+
+{% endblock %}

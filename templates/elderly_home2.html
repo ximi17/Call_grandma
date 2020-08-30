@@ -1,0 +1,82 @@
+{% extends "master.html" %}
+{% block content %}
+
+{% if path_lis %}
+<h1 class="h1 mb-3 font-weight-normal">Select photos of your family, then press submit.</h1> <br>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col">
+        <input type="checkbox" id="myCheckbox1" value="{{id_lis[0]}}" />
+        <label for="myCheckbox1"><img src="{{path_lis[0]}}" width="70" height="100"/></label>
+      </div>
+      <div class="col">
+        <div class="col">
+            <input type="checkbox" id="myCheckbox1" value="{{id_lis[1]}}" />
+            <label for="myCheckbox1"><img src="{{path_lis[1]}}" width="70" height="100"/></label>
+          </div>
+      </div>
+      <div class="col">
+        <div class="col">
+            <input type="checkbox" id="myCheckbox1" value="{{id_lis[2]}}" />
+            <label for="myCheckbox1"><img src="{{path_lis[2]}}" width="70" height="100"/></label>
+          </div>
+      </div>
+    </div>
+    <br>
+    <div class="row align-items-center">
+      <div class="col">
+        <div class="col">
+            <input type="checkbox" id="myCheckbox1" value="{{id_lis[3]}}" />
+            <label for="myCheckbox1"><img src="{{path_lis[3]}}" width="70" height="100"/></label>
+          </div>
+      </div>
+      <div class="col">
+        <div class="col">
+            <input type="checkbox" id="myCheckbox1" value="{{id_lis[4]}}" />
+            <label for="myCheckbox1"><img src="{{path_lis[4]}}" width="70" height="100"/></label>
+          </div>
+      </div>
+      <div class="col">
+        <div class="col">
+            <input type="checkbox" id="myCheckbox1" value="{{id_lis[5]}}" />
+            <label for="myCheckbox1"><img src="{{path_lis[5]}}" width="70" height="100"/></label>
+          </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col">
+        <div class="col">
+            <input type="checkbox" id="myCheckbox1" value="{{id_lis[8]}}" />
+            <label for="myCheckbox1"><img src="{{path_lis[8]}}" width="70" height="100"/></label>
+          </div>
+      </div>
+      <div class="col">
+        <div class="col">
+            <input type="checkbox" id="myCheckbox1" value="{{id_lis[6]}}" />
+            <label for="myCheckbox1"><img src="{{path_lis[6]}}" width="70" height="100"/></label>
+          </div>
+      </div>
+      <div class="col">
+        <div class="col">
+            <input type="checkbox" id="myCheckbox1" value="{{id_lis[7]}}" />
+            <label for="myCheckbox1"><img src="{{path_lis[7]}}" width="70" height="100"/></label>
+          </div>
+      </div>
+    </div>
+    <br><br>
+    <form action="/elderly_home_verify_pics/" method='post'>
+        <button style="padding: 10px 20px;font-size: 30px;border-radius: 10px;width:70%;"type="submit">Submit</button>
+    </form>
+
+    <br>
+
+    <audio controls>
+        <source src="../static/audios/call_grandma_main.ogg" type="audio/ogg">
+        <source src="../static/audios/call_grandma_main.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+  </div>
+  {% endif %}
+
+  {% endblock %}

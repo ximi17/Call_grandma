@@ -1,0 +1,57 @@
+{% extends "master.html" %}
+{% block content %}
+<body>
+
+  <h1 class="h1 mb-6 font-weight-normal">Press red button once to start recording. <br>
+    Press the button again to end recording. <br>
+    The message will be sent automatically</h1> <br>
+
+
+<div class="container">
+  <div class="row align-items-start">
+<audio controls>
+  <source src="../static/audios/call_grandma_main.ogg" type="audio/ogg">
+  <source src="../static/audios/call_grandma_main.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-2">
+        <input type="checkbox" id="myCheckbox1" />
+        <label for="myCheckbox1"><img src="../static/images/Youngling/1" width="120" height="160"/></label>
+      </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-lg-1">
+      <script>
+        function change() {
+          var img1 = "../static/images/play_button.png",
+              img2 = "../static/images/pause_button.png";
+          var imgElement = document.getElementById('test');
+          
+          imgElement.src = (imgElement.src === img1)? img2 : img1;
+          }
+      </script>
+      <img src="../static/images/play_button.png" id="test" width="150" height="150" onclick ="change();"/>
+    </div>
+  </div>
+  </div>
+</body>
+
+{% endblock %}

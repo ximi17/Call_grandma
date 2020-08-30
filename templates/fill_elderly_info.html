@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+{% block content %}
+
+<body class="text-center">
+  <form class="form-signin" enctype=multipart/form-data action="/add_elderly_info/{{id}}" method="post">
+    <img class="mb-4" src="../static/images/avatar_elder.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Tell us about the elderly in the family!</h1>
+    <label for="inputEmail" class="sr-only">Name</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Name" name='name' required autofocus> <br>
+
+    <input type=file name='file' id="uploadPic"> <br><br>
+    
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Done</button>
+    
+    <button class="btn btn-lg btn-primary btn-block">Add another one</button>
+    <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p> -->
+  </form>
+  
+</body>
+
+{% endblock %}
+       
